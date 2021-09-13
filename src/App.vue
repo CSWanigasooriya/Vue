@@ -1,30 +1,48 @@
 <template>
-  <HelloWorld msg="Hello World" />
   <Header title="Header" />
-  <router-link to="/about">About</router-link>
-  <router-view></router-view>
+  <main>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+  </main>
+  <Footer />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     Header,
+    Footer,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header,
+main,
+footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
 }
 </style>
