@@ -81,10 +81,15 @@ export default {
 <style scoped>
 .brand-logo {
   margin-left: 1em;
-  position: relative;
 }
 
 .brand-logo img {
   max-height: 54px;
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo {
+    margin-left: 0 !important;
+  }
 }
 </style>
