@@ -6,26 +6,22 @@ const routes = [
         path: '/',
         name: 'SignInRoute',
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/SignIn.vue'),
+            import('../views/SignIn.vue'),
     },
     {
         path: '/user',
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/User.vue'),
+            import('../views/User.vue'),
         children: [
             {
-                // UserProfile will be rendered inside User's <router-view>
-                // when /user/:id/profile is matched
                 path: 'home',
                 component: () =>
-                    import(/* webpackChunkName: "about" */ '../views/Home.vue'),
+                    import('../views/Home.vue'),
             },
             {
-                // UserPosts will be rendered inside User's <router-view>
-                // when /user/:id/posts is matched
                 path: 'about',
                 component: () =>
-                    import(/* webpackChunkName: "about" */ '../views/About.vue'),
+                    import('../views/About.vue'),
             }
         ],
         meta: {
@@ -38,6 +34,9 @@ const router = createRouter({
     history: createWebHistory(process.env.BASE_URL), routes
 })
 
+
+//Authentication Guards
+//Fix me [Remove Alert Boxes]
 router.beforeEach((to, from, next) => {
     const auth = getAuth();
     if (to.matched.some(record => record.meta.authRequired)) {
