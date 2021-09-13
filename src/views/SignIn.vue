@@ -5,12 +5,10 @@
     </div>
     <h1>Sign In</h1>
     <div>
-      <form @submit.prevent="login">
+      <form @submit.prevent="signIn()">
         <input type="email" placeholder="Email address..." v-model="email" />
         <input type="password" placeholder="Password..." v-model="password" />
-        <button type="submit" class="btn cyan darken-4" @click="signIn()">
-          Sign In
-        </button>
+        <button type="submit" class="btn cyan darken-4">Sign In</button>
       </form>
     </div>
   </div>
