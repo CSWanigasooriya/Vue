@@ -11,6 +11,14 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><router-link to="/about">About</router-link></li>
           <li>
+            <a
+              class="waves-effect waves-light btn"
+              @click="$router.push('sign-in')"
+            >
+              Sign In
+            </a>
+          </li>
+          <li>
             <a href="#"><i class="material-icons">more_vert</i></a>
           </li>
         </ul>
