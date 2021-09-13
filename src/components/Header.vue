@@ -9,12 +9,9 @@
           <span>{{ title }}</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/user/about">About</router-link></li>
           <li>
-            <a
-              class="waves-effect waves-light btn"
-              @click="$router.push('sign-in')"
-            >
+            <a class="waves-effect waves-light btn" @click="$router.push('/')">
               Sign In
             </a>
           </li>

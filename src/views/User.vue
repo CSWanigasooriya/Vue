@@ -1,13 +1,19 @@
 <template>
-  <router-view></router-view>
+  <Header title="Header" />
+  <main>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+  </main>
+  <Footer />
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-  name: "App",
+  name: "User",
   components: {
     Header,
     Footer,
@@ -38,9 +44,5 @@ footer {
   footer {
     padding-left: 0;
   }
-}
-
-button {
-  border-radius: 2em !important;
 }
 </style>
