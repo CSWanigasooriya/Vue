@@ -27,6 +27,16 @@ const routes = [
                 path: 'grade',
                 component: () =>
                     import('../views/Grade.vue'),
+            },
+            {
+                path: 'attendence',
+                component: () =>
+                    import('../views/Attendance.vue'),
+            },
+            {
+                path: 'message',
+                component: () =>
+                    import('../views/Message.vue'),
             }
         ],
         meta: {

@@ -5,30 +5,27 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">Time Table</span>
-            <!-- <vs-table striped>
-              <template #thead>
-                <vs-tr>
-                  <vs-th> Monday </vs-th>
-                  <vs-th> Tuesday </vs-th>
-                  <vs-th> Wednesday </vs-th>
-                  <vs-th> Thursday </vs-th>
-                  <vs-th> Friday </vs-th>
-                </vs-tr>
-              </template>
-              <template #tbody>
-                <vs-tr :key="i" v-for="(tr, i) in users" :data="tr">
-                  <vs-td>
-                    {{ tr.name }}
-                  </vs-td>
-                  <vs-td>
-                    {{ tr.email }}
-                  </vs-td>
-                  <vs-td>
-                    {{ tr.id }}
-                  </vs-td>
-                </vs-tr>
-              </template>
-            </vs-table> -->
+            <table class="responsive-table highlight">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednsday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

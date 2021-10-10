@@ -33,11 +33,11 @@
     </li>
     <li>
       <router-link to="/user/attendence" active-class="active">
-        <i class="material-icons">event</i>Attendence
+        <i class="material-icons">event</i>Attendance
       </router-link>
     </li>
     <li>
-      <router-link to="/user/messages" active-class="active">
+      <router-link to="/user/message" active-class="active">
         <i class="material-icons">message</i>Messages
       </router-link>
     </li>
