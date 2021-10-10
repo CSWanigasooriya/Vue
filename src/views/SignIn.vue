@@ -32,6 +32,9 @@
                 </div>
               </div>
               <div class="card-action center">
+                <div class="progress transparent" v-if="authenticated">
+                  <div class="indeterminate indigo"></div>
+                </div>
                 <button type="submit" class="btn">Sign In</button>
               </div>
             </div>
@@ -72,11 +75,10 @@ export default {
   },
   methods: {
     signIn() {
+      this.authenticated = true;
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
           // Signed in
-          this.authenticated = true;
-
           setTimeout(() => {
             const user = userCredential.user;
             this.$router.push("/user/home");
@@ -89,6 +91,7 @@ export default {
           const errorMessage = error.message;
           console.log(errorCode + errorMessage);
           //Handle error
+          this.authenticated = false;
           alert(errorMessage);
         });
     },

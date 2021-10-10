@@ -65,7 +65,6 @@ router.beforeEach((to, from, next) => {
             } else {
                 // User is signed out
                 // ...
-                alert('You must be logged in to see this page');
                 next({
                     path: '/',
                 });
