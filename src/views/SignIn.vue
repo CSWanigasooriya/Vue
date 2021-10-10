@@ -1,8 +1,8 @@
 <template>
-  <div class="background">
+  <div class="background valign-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 valign-wrapper">
+        <div class="col s12 m6 l4">
           <form @submit.prevent="signIn">
             <div class="card">
               <div class="card-content">
@@ -40,7 +40,7 @@
             </div>
           </form>
         </div>
-        <div class="col s12 m6 valign-wrapper">
+        <div class="col s12 m6 l8 hide-on-small-only">
           <img src="@/assets/login.png" class="responsive-img" />
         </div>
       </div>
@@ -106,7 +106,7 @@ export default {
 
 .card {
   border-radius: 1em;
-  min-height: 75vh;
+  min-height: 79vh;
 }
 
 .card-content {
@@ -119,5 +119,9 @@ export default {
 
 .card-title {
   color: #5e5acf;
+}
+
+img {
+  margin-top: 5vh;
 }
 </style>
