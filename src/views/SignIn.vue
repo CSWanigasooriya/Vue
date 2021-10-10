@@ -1,15 +1,46 @@
 <template>
-  <div class="container">
-    <div class="progress" v-if="authenticated">
-      <div class="indeterminate"></div>
-    </div>
-    <h1>Sign In</h1>
-    <div>
-      <form @submit.prevent="signIn()">
-        <input type="email" placeholder="Email address..." v-model="email" />
-        <input type="password" placeholder="Password..." v-model="password" />
-        <button type="submit" class="btn cyan darken-4">Sign In</button>
-      </form>
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 valign-wrapper">
+          <form @submit.prevent="signIn">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title center"
+                  ><b> Welcome to KDU Student Space!</b>
+                </span>
+                <p style="font-size: 12px">Additional Text</p>
+                <br />
+
+                <div class="row">
+                  <div class="col s12">
+                    <input
+                      type="email"
+                      placeholder="Email address..."
+                      v-model="email"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <input
+                      type="password"
+                      placeholder="Password..."
+                      v-model="password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-action center">
+                <button type="submit" class="btn">Sign In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12 m6 valign-wrapper">
+          <img src="@/assets/login.png" class="responsive-img" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -66,4 +97,24 @@ export default {
 </script>
 
 <style scoped>
+.background {
+  background-color: #835acf52;
+}
+
+.card {
+  border-radius: 1em;
+  min-height: 75vh;
+}
+
+.card-content {
+  height: 60vh;
+}
+
+.valign-wrapper {
+  height: 100vh;
+}
+
+.card-title {
+  color: #5e5acf;
+}
 </style>

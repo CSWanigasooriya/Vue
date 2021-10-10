@@ -19,9 +19,14 @@ const routes = [
                     import('../views/Home.vue'),
             },
             {
-                path: 'about',
+                path: 'course',
                 component: () =>
-                    import('../views/About.vue'),
+                    import('../views/Course.vue'),
+            },
+            {
+                path: 'grade',
+                component: () =>
+                    import('../views/Grade.vue'),
             }
         ],
         meta: {

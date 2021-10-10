@@ -29,7 +29,7 @@ main {
 header,
 main,
 footer {
-  padding-left: 300px;
+  padding-left: 332px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -40,7 +40,14 @@ footer {
   }
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 95%;
+}
+
 button {
-  border-radius: 2em !important;
+  border-radius: 20px !important;
+  background-color: #5a5ecf !important;
 }
 </style>
