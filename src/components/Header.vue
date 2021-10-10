@@ -2,11 +2,11 @@
   <header>
     <nav class="transparent z-depth-0">
       <div class="nav-wrapper">
-        <a href="#" data-target="slide-out" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
+        <a data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons black-text">menu</i>
         </a>
-        <a href="#" class="brand-logo">
-          <span>{{ title }}</span>
+        <a class="brand-logo black-text">
+          <span>Dashboard</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
