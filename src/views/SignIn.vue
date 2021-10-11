@@ -110,7 +110,7 @@ export default {
 }
 
 .card-content {
-  height: 60vh;
+  height: 65vh;
 }
 
 .valign-wrapper {

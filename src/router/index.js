@@ -9,6 +9,16 @@ const routes = [
             import('../views/SignIn.vue'),
     },
     {
+        // path: "*",
+        path: "/:catchAll(.*)",
+        name: "NotFound",
+        component: () =>
+            import('../views/Error.vue'),
+        meta: {
+            authRequired: true,
+        },
+    },
+    {
         path: '/user',
         component: () =>
             import('../views/User.vue'),
