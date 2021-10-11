@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <div class="content">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -36,7 +38,7 @@ footer {
   header,
   main,
   footer {
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 }
 
@@ -49,5 +51,9 @@ footer {
 button {
   border-radius: 20px !important;
   background-color: #5a5ecf !important;
+}
+
+.material-icons {
+  cursor: pointer;
 }
 </style>

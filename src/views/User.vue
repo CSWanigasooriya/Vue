@@ -2,9 +2,7 @@
   <Header title="Header" />
   <SideNav />
   <main>
-    <div class="content">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </main>
   <!-- <Footer /> -->
 </template>
@@ -23,28 +21,5 @@ export default {
 };
 </script>
 
-<style>
-.content {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-header,
-main,
-footer {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width: 992px) {
-  header,
-  main,
-  footer {
-    padding-left: 0;
-  }
-}
+<style scoped>
 </style>
