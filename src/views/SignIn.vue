@@ -45,12 +45,14 @@
         </div>
       </div>
     </div>
+    <Dialog />
   </div>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import Dialog from "../components/Dialog.vue";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 const auth = getAuth();
 
@@ -68,10 +70,12 @@ export default {
   },
   mounted() {
     $(".sidenav").sidenav("close");
+    $(".modal").modal();
   },
   components: {
     Header,
     Footer,
+    Dialog,
   },
   methods: {
     signIn() {
@@ -92,7 +96,10 @@ export default {
           console.log(errorCode + errorMessage);
           //Handle error
           this.authenticated = false;
-          alert(errorMessage);
+          var content =
+            '<div id="sign-in-modal" class="modal modal-fixed-footer"><div class="modal-content"><h4>{{ title }}</h4><p>{{ message }}</p></div><div class="modal-footer"><a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> </div></div>';
+          $(".modal").append(content);
+          $(".modal").modal("open");
         });
     },
   },

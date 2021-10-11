@@ -9,6 +9,11 @@ const routes = [
             import('../views/SignIn.vue'),
     },
     {
+        path: '/register',
+        component: () =>
+            import('../views/SQLRegister.vue'),
+    },
+    {
         // path: "*",
         path: "/:catchAll(.*)",
         name: "NotFound",
