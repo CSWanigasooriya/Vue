@@ -9,9 +9,9 @@
             class="responsive-img"
           />
         </div> -->
-        <a href="#user"><img class="circle" v-bind:src="photoURL" /></a>
-        <a href="#name"><span class="white-text name">KDUSMS</span></a>
-        <a href="#email"
+        <a><img class="circle" v-bind:src="photoURL" /></a>
+        <a><span class="white-text name">KDUSMS</span></a>
+        <a @click="$router.push('/user/profile')"
           ><span class="white-text email">{{ email }}</span></a
         >
       </div>
@@ -81,5 +81,9 @@ export default {
   font-weight: bold;
   margin-left: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+  cursor: pointer;
 }
 </style>

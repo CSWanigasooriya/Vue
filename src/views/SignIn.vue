@@ -83,12 +83,22 @@ export default {
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
           // Signed in
-          setTimeout(() => {
-            const user = userCredential.user;
-            this.$router.push("/user/home");
-            console.log(user);
-          }, 3000); //Three second delay to show progress bar
-          // ...
+          const user = userCredential.user;
+          user
+            .getIdTokenResult()
+            .then((idTokenResult) => {
+              // Confirm the user is an Admin.
+              if (!!idTokenResult.claims.admin) {
+                // Show admin UI.
+                this.$router.push("/admin");
+              } else {
+                // Show regular user UI.
+                this.$router.push("/user");
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -113,7 +123,7 @@ export default {
 
 .card {
   border-radius: 1em;
-  min-height: 79vh;
+  min-height: 80vh;
 }
 
 .card-content {

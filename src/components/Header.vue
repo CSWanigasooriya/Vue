@@ -6,7 +6,7 @@
           <i class="material-icons black-text">menu</i>
         </a>
         <a class="brand-logo black-text">
-          <span>Dashboard</span>
+          <span>{{ getPath(this.$route.path) }}</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
@@ -33,6 +33,22 @@ export default {
     $(".dropdown-trigger").dropdown();
   },
   methods: {
+    getPath(path) {
+      switch (path) {
+        case "/user/home":
+          return "Home";
+        case "/user/course":
+          return "Courses";
+        case "/user/grade":
+          return "Grades";
+        case "/user/attendence":
+          return "Attendence";
+        case "/user/message":
+          return "Message";
+        case "/user/profile":
+          return "Profile";
+      }
+    },
     signOut() {
       const auth = getAuth();
       signOut(auth)

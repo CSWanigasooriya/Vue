@@ -19,6 +19,11 @@ const routes = [
         name: "NotFound",
         component: () =>
             import('../views/Error.vue'),
+    },
+    {
+        path: '/admin',
+        component: () =>
+            import('../views/Admin.vue'),
         meta: {
             authRequired: true,
         },
@@ -28,6 +33,11 @@ const routes = [
         component: () =>
             import('../views/User.vue'),
         children: [
+            {
+                path: '',
+                component: () =>
+                    import('../views/Home.vue'),
+            },
             {
                 path: 'home',
                 component: () =>
@@ -52,6 +62,11 @@ const routes = [
                 path: 'message',
                 component: () =>
                     import('../views/Message.vue'),
+            },
+            {
+                path: 'profile',
+                component: () =>
+                    import('../views/Profile.vue'),
             }
         ],
         meta: {
