@@ -9,10 +9,13 @@ admin.initializeApp({
 )
 
 module.exports = (app) => {
+    app.get('/', (req, res) => {
+        res.send('Hello world')
+    });
+    
     app.post('/register',
         AuthenticationControllerPolicy.register,
         AuthenticationController.register)
-
 
     app.post("/setAdminClaim", (req, res) => {
         const uid = req.body.uid;
@@ -26,3 +29,4 @@ module.exports = (app) => {
             });
     });
 }
+
