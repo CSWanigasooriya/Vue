@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <ul v-if="users && users.length">
