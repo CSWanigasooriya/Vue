@@ -7,8 +7,9 @@
           <form @submit.prevent="signIn">
             <div class="card">
               <div class="card-content">
+                  <br/>
                 <span class="card-title center"
-                  ><b> Welcome to KDU Student Space!</b>
+                  ><b> WELCOME TO KDU STUDENT SPACE!</b>
                 </span>
                 <p style="font-size: 16px;">Please enter your KDU email address and the password</p>
                 <br />

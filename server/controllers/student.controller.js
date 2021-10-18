@@ -12,7 +12,7 @@ exports.create = (req, res) => {
   // Create a student
   const student = new student({
     Reg_num: req.body.Reg_num,
-    NIC: req.body.student_name,
+    NIC: req.body.NIC,
     fName: req.body.fName,
     lname: req.body.lname,
     address: req.body.address,

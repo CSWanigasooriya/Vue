@@ -9,8 +9,8 @@
             class="responsive-img"
           />
         </div> -->
-        <a><img class="circle" v-bind:src="photoURL" /></a>
-        <a><span class="white-text name">KDUSMS</span></a>
+        <i class="material-icons">school</i>
+        <a><span class="white-text name">KDU ADMIN SPACE</span></a>
         <a @click="$router.push('/user/profile')"
           ><span class="white-text email">{{ email }}</span></a
         >
@@ -95,5 +95,9 @@ export default {
 }
 a {
   cursor: pointer;
+}
+li {
+  color: white !important;
+  size: "48";
 }
 </style>

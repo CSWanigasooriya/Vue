@@ -4,7 +4,11 @@
       <div class="card">
         <div class="card-content">
           <div class="row">
-            <div class="col s12">
+            <div class="col s6">
+              <br/>
+              <p class="left"> <b>New Course</b></p>
+            </div>
+            <div class="col s6">
               <button class="btn right">Save</button>
             </div>
           </div>
@@ -13,7 +17,7 @@
               <div class="row">
                 <div class="col s12">
                   <div class="input-field">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix">edit</i>
                     <textarea
                       id="course_code"
                       class="materialize-textarea"
@@ -21,7 +25,7 @@
                     <label for="course_code">Course Code</label>
                   </div>
                   <div class="input-field">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix">edit</i>
                     <textarea
                       id="course_name"
                       class="materialize-textarea"
@@ -29,7 +33,7 @@
                     <label for="course_name">Course Name</label>
                   </div>
                   <div class="input-field">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix">edit</i>
                     <textarea
                       id="no_of_credits"
                       class="materialize-textarea"
