@@ -39,7 +39,7 @@
                   </div>
                 </div>
               </div>
-              <div style="text-align:center; margin-top:-5em">
+              <div style="text-align:center">
                 <div class="progress transparent" v-if="authenticated">
                   <div class="indeterminate indigo"></div>
                 </div>
@@ -197,7 +197,6 @@ input:focus::placeholder{
   padding-bottom: 5px;
 }
 .btn {
-  margin-top: 0%;
   width: 35%;
   text-transform: none;
   font-weight: 500;
