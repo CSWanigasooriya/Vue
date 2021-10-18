@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col s6">
               <br/>
-              <p class="left"> <b>New Student</b></p>
+              <p class="left"> <b>New Lecturer</b></p>
             </div>
             <div class="col s6">
               <button class="btn right">Save</button>
@@ -19,74 +19,74 @@
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="Reg_num"
+                      id="lecID"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="Reg_num">Index Number</label>
+                    <label for="lecID">Lecturer ID</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="NIC"
+                      id="lec_NIC"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="NIC">NIC</label>
+                    <label for="lec_NIC">NIC</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="fName"
+                      id="lec_fName"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="fName">First Name</label>
+                    <label for="lec_fName">First Name</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="lName"
+                      id="lec_lName"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="lName">Last Name</label>
+                    <label for="lec_lName">Last Name</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="address"
+                      id="lec_address"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="address">Address</label>
+                    <label for="lec_address">Address</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="country"
+                      id="lec_country"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="country">Country</label>
+                    <label for="lec_country">Country</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="DOB"
+                      id="lec_DOB"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="DOB">Date of Birth</label>
+                    <label for="lec_DOB">Date of Birth</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="email"
+                      id="lec_email"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="email">Email</label>
+                    <label for="lec_email">Email</label>
                   </div>
                   <div class="input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea
-                      id="gender"
+                      id="lec_gender"
                       class="materialize-textarea"
                     ></textarea>
-                    <label for="gender">Gender</label>
+                    <label for="lec_gender">Gender</label>
                   </div>
                 </div>
               </div>
