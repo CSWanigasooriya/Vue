@@ -17,27 +17,32 @@
       </div>
     </li>
     <li>
-      <router-link to="/user/home" active-class="active">
-        <i class="material-icons">home</i>Home
+      <router-link to="/admin/student" active-class="active">
+        <i class="material-icons">person</i>Students
       </router-link>
     </li>
     <li>
-      <router-link to="/user/course" active-class="active">
-        <i class="material-icons">book</i>Course
+      <router-link to="/admin/lecturer" active-class="active">
+        <i class="material-icons">badge</i>Lecturers
       </router-link>
     </li>
     <li>
-      <router-link to="/user/grade" active-class="active">
-        <i class="material-icons">grade</i>Grade
+      <router-link to="/admin/admin-course" active-class="active">
+        <i class="material-icons">book</i>Courses
       </router-link>
     </li>
     <li>
-      <router-link to="/user/attendence" active-class="active">
+      <router-link to="/admin/admin-grade" active-class="active">
+        <i class="material-icons">grade</i>Grades
+      </router-link>
+    </li>
+    <li>
+      <router-link to="/admin/admin-attendence" active-class="active">
         <i class="material-icons">event</i>Attendance
       </router-link>
     </li>
     <li>
-      <router-link to="/user/message" active-class="active">
+      <router-link to="/admin/admin-message" active-class="active">
         <i class="material-icons">message</i>Messages
       </router-link>
     </li>
@@ -82,7 +87,12 @@ export default {
   margin-left: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+#slide-out li a {
+  color: #5fe6f9;
+}
+#slide-out li a i {
+  color: #5fe6f9;
+}
 a {
   cursor: pointer;
 }

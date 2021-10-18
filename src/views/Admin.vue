@@ -1,7 +1,13 @@
 <template>
-  <div>
+  <Header title="Header" />
+  <AdminNav />
+  <main>
+    <router-view></router-view>
+  </main>
+  <!-- <Footer /> -->
+</template>
+  <!-- <div>
     <ul v-if="users && users.length">
-      <!-- //for loop -->
       <li v-for="user in users" :key="user.email"> 
         {{ user.email }}
         {{ user.password }}
@@ -10,19 +16,25 @@
     <h1>{{chamath}}</h1>
 
     <button @click="signOut">Sign out</button>
-  </div>
-</template>
+  </div> -->
 
 <script>
 import { getAuth, signOut } from "firebase/auth";
-import axios from "axios";
 
+import AdminNav from "../components/AdminNav.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 export default {
   data() {
     return {
       users: [],
-      chamath:null
+      chamath: null,
     };
+  },
+  components: {
+    AdminNav,
+    Header,
+    Footer,
   },
   methods: {
     signOut() {
@@ -37,26 +49,6 @@ export default {
         });
     },
   },
-  created() {
-    axios
-      .get(`http://localhost:3000/users`)
-      .then((response) => {
-        // JSON responses are automatically parsed.
-        this.users = response.data;
-      })
-      .catch((e) => {
-        // this.errors.push(e);
-      });
-      
-      axios
-      .get(`http://localhost:3000/users/chamath@gmail.com`)
-      .then((response) => {
-        // JSON responses are automatically parsed.
-        this.chamath = response.data;
-      })
-      .catch((e) => {
-        // this.errors.push(e);
-      });
-  },
+  
 };
 </script>

@@ -24,6 +24,48 @@ const routes = [
         path: '/admin',
         component: () =>
             import('../views/Admin.vue'),
+        children: [
+            {
+                path: '',
+                component: () =>
+                    import('../views/Student.vue'),
+            },
+            {
+                path: 'student',
+                component: () =>
+                    import('../views/Student.vue'),
+            },
+            {
+                path: 'lecturer',
+                component: () =>
+                    import('../views/Lecturer.vue'),
+            },
+            {
+                path: 'admin-course',
+                component: () =>
+                    import('../views/AdminCourse.vue'),
+            },
+            {
+                path: 'admin-grade',
+                component: () =>
+                    import('../views/AdminGrade.vue'),
+            },
+            {
+                path: 'admin-attendence',
+                component: () =>
+                    import('../views/AdminAttendance.vue'),
+            },
+            {
+                path: 'admin-message',
+                component: () =>
+                    import('../views/AdminMessage.vue'),
+            },
+            {
+                path: 'profile',
+                component: () =>
+                    import('../views/Profile.vue'),
+            }
+        ],
         meta: {
             authRequired: true,
         },

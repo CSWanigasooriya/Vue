@@ -10,7 +10,7 @@ exports.create = (req, res) => {
   }
 
   // Create a course
-  const course = new course({
+  const course = new Course({
     course_code: req.body.course_code,
     course_name: req.body.course_name,
     no_of_credits: req.body.no_of_credits
@@ -67,7 +67,7 @@ exports.update = (req, res) => {
 
   Course.updateBycourse_code(
     req.params.course_code,
-    new course(req.body),
+    new Course(req.body),
     (err, data) => {
       if (err) {
         if (err.kind === "not_found") {

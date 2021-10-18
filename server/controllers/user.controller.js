@@ -1,8 +1,8 @@
-const User = require("../models/user.model.js");
+const User = require("../models/student.model.js");
 
 // Create and Save a new User
 exports.create = (req, res) => {
-  // Validate request
+  // Validate request 
   if (!req.body) {
     res.status(400).send({
       message: "Content can not be empty!"
