@@ -76,7 +76,7 @@ export default {
     0 6px 20px 0 hsla(238, 55%, 58%, 0.685);
 }
 .sidenav-fixed {
-  max-width: 30vh;
+  max-width: 33vh;
 }
 .active {
   border-top-left-radius: 20px;
