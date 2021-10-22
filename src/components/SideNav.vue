@@ -1,5 +1,6 @@
 <template>
   <!-- sidenav -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <ul id="slide-out" class="sidenav sidenav-fixed">
     <li>
       <div class="user-view">
@@ -18,27 +19,27 @@
     </li>
     <li>
       <router-link to="/user/home" active-class="active">
-        <i class="material-icons">home</i>Home
+        <i class="material-icons">home</i><span>Home</span> 
       </router-link>
     </li>
     <li>
       <router-link to="/user/course" active-class="active">
-        <i class="material-icons">book</i>Course
+        <i class="material-icons">book</i><span>Course</span> 
       </router-link>
     </li>
     <li>
       <router-link to="/user/grade" active-class="active">
-        <i class="material-icons">grade</i>Grade
+        <i class="material-icons">grade</i><span>Grades</span> 
       </router-link>
     </li>
     <li>
       <router-link to="/user/attendence" active-class="active">
-        <i class="material-icons">event</i>Attendance
+        <i class="material-icons">event</i><span>Attendance</span> 
       </router-link>
     </li>
     <li>
       <router-link to="/user/message" active-class="active">
-        <i class="material-icons">message</i>Messages
+        <i class="material-icons">message</i><span>Messages</span> 
       </router-link>
     </li>
   </ul>
@@ -74,11 +75,13 @@ export default {
   box-shadow: 0 4px 8px 0 hsla(238, 55%, 58%, 0.205),
     0 6px 20px 0 hsla(238, 55%, 58%, 0.685);
 }
+.sidenav-fixed {
+  max-width: 30vh;
+}
 .active {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background: rgb(255, 255, 255);
-  color: black;
   font-weight: bold;
   margin-left: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -89,11 +92,23 @@ export default {
 #slide-out li a i {
   color: white;
 }
+.active span{
+  color: rgb(70, 70, 70);
+  transition-duration: 0.3s;
+}
+.active i{
+  color: rgb(70, 70, 70) !important;
+  transition-duration: 0.3s;
+}
 a {
   cursor: pointer;
 }
 li {
   color: white !important;
   size: "48";
+}
+ul{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 </style>

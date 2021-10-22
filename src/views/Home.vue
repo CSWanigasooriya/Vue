@@ -8,6 +8,7 @@
             <table class="responsive-table highlight">
               <thead>
                 <tr>
+                  <th>Time</th>
                   <th>Monday</th>
                   <th>Tuesday</th>
                   <th>Wednsday</th>
@@ -18,6 +19,31 @@
 
               <tbody>
                 <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
                   <td>DSA</td>
                   <td>GPSD</td>
                   <td>GPSD</td>
@@ -30,7 +56,7 @@
         </div>
       </div>
       <div class="col s12 m4">
-        <div class="card">
+        <div class="card" >
           <div class="card-content">
             <span class="card-title">Announcements</span>
             <table class="responsive-table highlight">
@@ -48,14 +74,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col s12 m4">
+      <div class="col s12 m5">
         <div class="card">
           <div class="card-content">
             <span class="card-title">Courses</span>
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
+      <div class="col s12 m3">
         <div class="card">
           <div class="card-content" >
             <span class="card-title">Attendance</span>
@@ -81,17 +107,6 @@
               <tbody>
                 <tr>
                   <td>Dear Student, please submit your assignment on or before this saturday.</td>
-                </tr>
-              </tbody>
-              <thead >
-                <tr >
-                  <!-- <th ><a href="#user"> <img class="circle" src="../assets/avatar1.png" style="width:4em">TM Siriwardena </a></th> -->
-                  <th ><a href="#user" style="color:black;">DE Karunaratne </a></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Dear Student, arrange a meeting for the group discussion on next monday.</td>
                 </tr>
               </tbody>
             </table>
@@ -130,4 +145,8 @@ export default {
 .card {
   border-radius: 1em;
 }
+.container{
+  margin-left: -1%;
+}
+
 </style>

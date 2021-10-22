@@ -1,5 +1,6 @@
 <template>
   <!-- sidenav -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <ul id="slide-out" class="sidenav sidenav-fixed">
     <li>
       <div class="user-view">
@@ -100,5 +101,9 @@ a {
 li {
   color: white !important;
   size: "48";
+}
+ul{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 </style>
