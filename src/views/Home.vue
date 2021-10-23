@@ -8,6 +8,7 @@
             <table class="responsive-table highlight">
               <thead>
                 <tr>
+                  <th>Time</th>
                   <th>Monday</th>
                   <th>Tuesday</th>
                   <th>Wednsday</th>
@@ -18,6 +19,31 @@
 
               <tbody>
                 <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
+                  <td>DSA</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                  <td>GPSD</td>
+                </tr>
+                <tr>
+                  <td>8:00am - 11.00am</td>
                   <td>DSA</td>
                   <td>GPSD</td>
                   <td>GPSD</td>
@@ -30,25 +56,40 @@
         </div>
       </div>
       <div class="col s12 m4">
-        <div class="card">
+        <div class="card" >
           <div class="card-content">
             <span class="card-title">Announcements</span>
+            <table class="responsive-table highlight">
+              <tbody>
+                <tr>
+                  <td>Please attend fill in your profile details before the deadline.</td>
+                </tr>
+                <tr>
+                  <td>Tommorrow will be a holiday for all the FOC students.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col s12 m4">
+      <div class="col s12 m5">
         <div class="card">
           <div class="card-content">
             <span class="card-title">Courses</span>
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
+      <div class="col s12 m3">
         <div class="card">
-          <div class="card-content">
-            <span class="card-title">Attendence</span>
+          <div class="card-content" >
+            <span class="card-title">Attendance</span>
+            <div style="text-align:center;">
+              <p style="padding-top:6%;padding-bottom:2%;">You do not have 80% attendance</p>
+              <i class="material-icons" style="font-size:8em; color:#CF5E5A;">error_outline</i><br>
+              <router-link to="/user/attendence">More details</router-link>
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +97,19 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">Messages</span>
+            <table class="responsive-table highlight striped">
+              <thead >
+                <tr >
+                  <!-- <th ><a href="#user"> <img class="circle" src="../assets/avatar1.png" style="width:4em">TM Siriwardena </a></th> -->
+                  <th ><a href="#user" style="color:black;">TM Siriwardena </a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dear Student, please submit your assignment on or before this saturday.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -91,4 +145,8 @@ export default {
 .card {
   border-radius: 1em;
 }
+.container{
+  margin-left: -1%;
+}
+
 </style>

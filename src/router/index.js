@@ -115,6 +115,56 @@ const routes = [
             authRequired: true,
         },
     },
+    {
+        path: '/lecturer',
+        component: () =>
+            import('../views/LecturerView.vue'),
+        children: [
+            {
+                path: '',
+                component: () =>
+                    import('../views/LecturerHome.vue'),
+            },
+            {
+                path: 'home',
+                component: () =>
+                    import('../views/LecturerHome.vue'),
+            },
+            {
+                path: 'courses',
+                component: () =>
+                    import('../views/LecturerCourses.vue'),
+            },
+            {
+                path: 'students',
+                component: () =>
+                    import('../views/LecturerStudents.vue'),
+            },
+            {
+                path: 'grades',
+                component: () =>
+                    import('../views/LecturerGrades.vue'),
+            },
+            {
+                path: 'attendence',
+                component: () =>
+                    import('../views/LecturerAttendance.vue'),
+            },
+            {
+                path: 'messages',
+                component: () =>
+                    import('../views/LecturerMessages.vue'),
+            },
+            {
+                path: 'profile',
+                component: () =>
+                    import('../views/LecturerProfile.vue'),
+            }
+        ],
+        meta: {
+            authRequired: true,
+        },
+    },
 ]
 
 const router = createRouter({

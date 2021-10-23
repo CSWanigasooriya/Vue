@@ -1,4 +1,5 @@
 <template>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <header>
     <nav class="transparent z-depth-0">
       <div class="nav-wrapper">
@@ -82,5 +83,13 @@ export default {
 .btn {
   border-radius: 20px;
   background-color: #5a5ecf;
+}
+span{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 5%;
+}
+header{
+  padding:1%;
 }
 </style>
