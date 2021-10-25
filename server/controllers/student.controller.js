@@ -10,11 +10,11 @@ exports.create = (req, res) => {
   }
 
   // Create a student
-  const student = new student({
+  const student = new Student({
     Reg_num: req.body.Reg_num,
     NIC: req.body.NIC,
     fName: req.body.fName,
-    lname: req.body.lname,
+    lName: req.body.lname,
     address: req.body.address,
     country: req.body.country,
     DOB: req.body.DOB,

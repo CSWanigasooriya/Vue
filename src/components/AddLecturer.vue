@@ -9,7 +9,7 @@
               <p class="left"> <b>New Lecturer</b></p>
             </div>
             <div class="col s6">
-              <button class="btn right">Save</button>
+              <button class="btn right" >Save</button>
             </div>
           </div>
           <div class="row">

@@ -5,15 +5,15 @@
         <div class="card-content">
           <div class="row">
             <div class="col s6">
-              <br/>
-              <p class="left"> <b>New Student</b></p>
+              <br />
+              <p class="left"><b>New Student</b></p>
             </div>
             <div class="col s6">
-              <button class="btn right">Save</button>
+              <button class="btn right" @click="onSubmit">Save</button>
             </div>
           </div>
           <div class="row">
-            <div class="col s12 ">
+            <div class="col s12">
               <div class="row">
                 <div class="col s12">
                   <div class="input-field">
@@ -21,6 +21,7 @@
                     <textarea
                       id="Reg_num"
                       class="materialize-textarea"
+                      v-model="form.Reg_num"
                     ></textarea>
                     <label for="Reg_num">Index Number</label>
                   </div>
@@ -29,6 +30,7 @@
                     <textarea
                       id="NIC"
                       class="materialize-textarea"
+                      v-model="form.NIC"
                     ></textarea>
                     <label for="NIC">NIC</label>
                   </div>
@@ -37,6 +39,7 @@
                     <textarea
                       id="fName"
                       class="materialize-textarea"
+                      v-model="form.fName"
                     ></textarea>
                     <label for="fName">First Name</label>
                   </div>
@@ -45,6 +48,7 @@
                     <textarea
                       id="lName"
                       class="materialize-textarea"
+                      v-model="form.lName"
                     ></textarea>
                     <label for="lName">Last Name</label>
                   </div>
@@ -53,6 +57,7 @@
                     <textarea
                       id="address"
                       class="materialize-textarea"
+                      v-model="form.address"
                     ></textarea>
                     <label for="address">Address</label>
                   </div>
@@ -61,6 +66,7 @@
                     <textarea
                       id="country"
                       class="materialize-textarea"
+                      v-model="form.country"
                     ></textarea>
                     <label for="country">Country</label>
                   </div>
@@ -69,6 +75,7 @@
                     <textarea
                       id="DOB"
                       class="materialize-textarea"
+                      v-model="form.DOB"
                     ></textarea>
                     <label for="DOB">Date of Birth</label>
                   </div>
@@ -77,6 +84,7 @@
                     <textarea
                       id="email"
                       class="materialize-textarea"
+                      v-model="form.email"
                     ></textarea>
                     <label for="email">Email</label>
                   </div>
@@ -85,6 +93,7 @@
                     <textarea
                       id="gender"
                       class="materialize-textarea"
+                      v-model="form.gender"
                     ></textarea>
                     <label for="gender">Gender</label>
                   </div>
@@ -100,17 +109,35 @@
 
 <script>
 import { getAuth } from "firebase/auth";
-
+import axios from "axios";
 const auth = getAuth();
 const user = auth.currentUser;
 export default {
   data() {
     return {
-      email: "",
+      form: {
+        Reg_num: "",
+        NIC: null,
+        fName: "",
+        lName: "",
+        address: "",
+        country: "",
+        DOB: null,
+        email: "",
+        gender: "",
+      },
     };
   },
-  created() {
-    this.email = user.email;
+  methods: {
+    async onSubmit() {
+      await axios.post(
+        "http://localhost:3000/students",
+        this.form,
+        {
+          // Config
+        }
+      );
+    },
   },
 };
 </script>
@@ -118,7 +145,6 @@ export default {
 <style scoped>
 .card {
   border-radius: 2em;
-  
 }
 
 .valign-wrapper {
