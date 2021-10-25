@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-      <button class="btn" @click="showAddStudent=!showAddStudent">Add student</button>
-      <AddStudent v-if="showAddStudent"/> 
+    <button class="btn" @click="showAddStudent = !showAddStudent">
+      Add student
+    </button>
+    <AddStudent v-if="showAddStudent" @toggle-card="updateTable" />
 
-    <table class="striped">
+    <table class="striped responsive-table">
       <thead>
         <tr>
           <th>Index Number</th>
@@ -14,6 +16,7 @@
           <th>Date of Birth</th>
           <th>Email</th>
           <th>Gender</th>
+          <th></th>
         </tr>
       </thead>
       <tbody v-if="students && students.length">
@@ -26,7 +29,14 @@
           <td>{{ student.DOB }}</td>
           <td>{{ student.email }}</td>
           <td>{{ student.gender }}</td>
-
+          <td>
+            <i class="material-icons">edit</i
+            ><i
+              class="material-icons red-text"
+              @click="deleteStudent(student.Reg_num)"
+              >delete</i
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -35,15 +45,40 @@
 
 <script>
 import axios from "axios";
-import AddStudent from "../components/AddStudent.vue"
+import AddStudent from "../components/AddStudent.vue";
 export default {
   data() {
     return {
       students: [],
-      showAddStudent: false
+      showAddStudent: false,
     };
   },
-  components: { AddStudent
+  components: { AddStudent },
+  methods: {
+    async getStudents() {
+      await axios
+        .get(`http://localhost:3000/students`)
+        .then((response) => {
+          // JSON responses are automatically parsed.
+          this.students = response.data;
+        })
+        .catch((e) => {
+          // this.errors.push(e);
+        });
+    },
+    async deleteStudent(Reg_num) {
+      await axios.delete(`http://localhost:3000/students/${Reg_num}`).then(
+        setTimeout(() => {
+          this.getStudents();
+        }, 100)
+      );
+    },
+    async updateTable() {
+      setTimeout(() => {
+        this.getStudents();
+        this.showAddStudent = false;
+      }, 100);
+    },
   },
   created() {
     axios

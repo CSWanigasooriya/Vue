@@ -1,5 +1,8 @@
 <template>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
   <div class="background valign-wrapper">
     <div class="container">
       <div class="row">
@@ -7,14 +10,16 @@
           <form @submit.prevent="signIn">
             <div class="card">
               <div class="card-content">
-                  <br/>
+                <br />
                 <span class="card-title center"
                   ><b> WELCOME TO KDU STUDENT SPACE!</b>
                 </span>
-                <p style="font-size: 16px;">Please enter your KDU email address and the password</p>
+                <p style="font-size: 16px">
+                  Please enter your KDU email address and the password
+                </p>
                 <br />
 
-                <div class="row" style="padding-top:6%">
+                <div class="row" style="padding-top: 6%">
                   <label for="email" class="label">Email address</label>
                   <div class="col s12">
                     <input
@@ -39,7 +44,7 @@
                   </div>
                 </div>
               </div>
-              <div style="text-align:center">
+              <div style="text-align: center">
                 <div class="progress transparent" v-if="authenticated">
                   <div class="indeterminate indigo"></div>
                 </div>
@@ -99,6 +104,9 @@ export default {
               if (!!idTokenResult.claims.admin) {
                 // Show admin UI.
                 this.$router.push("/admin");
+              } else if (!!idTokenResult.claims.lecturer) {
+                // Show regular user UI.
+                this.$router.push("/lecturer");
               } else {
                 // Show regular user UI.
                 this.$router.push("/user");
@@ -142,7 +150,7 @@ export default {
 
 .card-content {
   height: 65vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 
@@ -173,25 +181,24 @@ export default {
   border: 1px solid #a7a7a7 !important;
   border-radius: 1em !important;
   padding: 1em !important;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 13px !important;
   color: #505050 !important;
-
 }
-input:focus{
+input:focus {
   border: 2px solid #a9a6ff !important;
   box-shadow: 0px 0px 8px 0px #c1c1f7 !important;
   transition-duration: 0.5s;
 }
-input:focus::placeholder{
+input:focus::placeholder {
   color: transparent !important;
   transition-duration: 0.2s;
 }
 ::placeholder {
   color: #a7a7a7 !important;
-  text-align: center
+  text-align: center;
 }
-.label{
+.label {
   color: #6965f3;
   font-size: 12px;
   padding-bottom: 5px;
@@ -203,7 +210,7 @@ input:focus::placeholder{
   letter-spacing: 2px;
 }
 img {
-  padding-top:15%; 
-  padding-left:5%
+  padding-top: 15%;
+  padding-left: 5%;
 }
 </style>

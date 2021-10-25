@@ -16,6 +16,6 @@ module.exports = app => {
     // Delete a students with students_code
     app.delete("/students/:Reg_num", student.delete);
 
-    // Create a new students
-    app.delete("/students", student.deleteAll);
+    // Delete all students
+    //app.delete("/students", student.deleteAll);
 };

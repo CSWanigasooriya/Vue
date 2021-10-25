@@ -4,12 +4,9 @@
       <div class="card">
         <div class="card-content">
           <div class="row">
-            <div class="col s6">
+            <div class="col s12">
               <br />
               <p class="left"><b>New Student</b></p>
-            </div>
-            <div class="col s6">
-              <button class="btn right" @click="onSubmit">Save</button>
             </div>
           </div>
           <div class="row">
@@ -100,6 +97,9 @@
                 </div>
               </div>
             </div>
+            <div class="col s12">
+              <button class="btn right" @click="onSubmit">Save</button>
+            </div>
           </div>
         </div>
       </div>
@@ -130,13 +130,8 @@ export default {
   },
   methods: {
     async onSubmit() {
-      await axios.post(
-        "http://localhost:3000/students",
-        this.form,
-        {
-          // Config
-        }
-      );
+      await axios.post("http://localhost:3000/students", this.form, 
+      ).then(this.$emit('toggle-card',true))
     },
   },
 };

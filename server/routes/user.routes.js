@@ -16,6 +16,6 @@ module.exports = app => {
   // Delete a User with email
   app.delete("/users/:email", users.delete);
 
-  // Create a new User
-  app.delete("/users", users.deleteAll);
+  // Delete all User
+  //app.delete("/users", users.deleteAll);
 };

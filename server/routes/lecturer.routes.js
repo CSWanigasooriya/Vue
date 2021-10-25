@@ -16,6 +16,6 @@ module.exports = app => {
     // Delete a lecturers with lecturers_code
     app.delete("/lecturers/:lecID", lecturer.delete);
 
-    // Create a new lecturers
-    app.delete("/lecturers", lecturer.deleteAll);
+    // Delete all lecturers
+    //app.delete("/lecturers", lecturer.deleteAll);
 };
