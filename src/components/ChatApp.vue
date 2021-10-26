@@ -1,4 +1,6 @@
 <template>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
     <div class="container">
     <div class="row">
       <div class="col s2 m3" >
@@ -13,18 +15,28 @@
             </form>
             </div>
         </nav>
+        <!-- <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div> -->
         <table class="responsive-table highlight">
               <tbody>
                 <tr>
                     <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar1.png"></a></td>
-                    <td>Perera</td>
+                    <td>KH Perera</td>
                 </tr>
                 <tr>
-                    <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar1.png"></a></td>
-                    <td>Perera</td>
+                    <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar4.jpg"></a></td>
+                    <td>HIG Aluthge</td>
+                </tr>
+                <tr>
+                    <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar2.jpg"></a></td>
+                    <td>SMJ Wijeratne</td>
                 </tr><tr>
-                    <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar1.png"></a></td>
-                    <td>Perera</td>
+                    <td style="width:20px;text-align:center"><a href="#user"><img class="circle"  src="../assets/avatar3.jpg"></a></td>
+                    <td>RC Soysa</td>
                 </tr>
               </tbody>
         
@@ -39,10 +51,10 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                <img class="circle"  src="../assets/avatar4.jpg">
                             </a>
                             <div class="chat-about">
-                                <h6 class="m-b-0">Aiden Chavez</h6>
+                                <h6 class="m-b-0">HIG Aluthge</h6>
                                 <small>Last seen: 2 hours ago</small>
                             </div>
                         </div>
@@ -60,7 +72,7 @@
                             <div class="message-data text-right">
                                 <span class="message-data-time">10:10 AM, Today</span>
                             </div>
-                            <div class="message other-message float-right"> Hi Aiden, how are you? How is the project coming along? </div>
+                            <div class="message other-message float-right"> Hello, How is the project coming along? </div>
                         </li>                            
                         <li class="clearfix">
                             <div class="message-data">
@@ -70,16 +82,17 @@
                         </li>
                         <li class="clearfix">
                             <div class="message-data">
-                                <span class="message-data-time">10:15 AM, Today</span>
+                                <span class="message-data-time">10:16 AM, Today</span>
                             </div>
-                            <div class="message my-message">Project has been already finished and I have results to show you.</div>
+                            <div class="message my-message">Shall I schedule a meeting for tommorrow?.</div>
                         </li>
                         <li class="clearfix">
                             <div class="message-data">
-                                <span class="message-data-time">10:15 AM, Today</span>
+                                <span class="message-data-time">10:16 AM, Today</span>
                             </div>
-                            <div class="message my-message">Project has been already finished and I have results to show you.</div>
+                            <div class="message my-message">Please let me know the time if you're available.</div>
                         </li>
+                        
                     </ul>
                 </div>
                 <div class="chat-message clearfix">
@@ -104,9 +117,7 @@
 
 <style scoped>
 
-.container{
-    margin-left: 2em !important;
-}
+
 .circle {
     width: 3em;
 }
@@ -125,6 +136,15 @@
     position: relative;
     width: 100%;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.input-field{
+    background: rgb(221, 213, 245);
+  box-sizing: border-box !important;
+  padding: 1em !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+  color: #505050 !important;
+
 }
 .chat-app .people-list {
     width: 280px;
@@ -369,5 +389,26 @@
         height: calc(100vh - 350px);
         overflow-x: auto
     }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(248, 245, 255);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5a5ecf;
+  border-radius: 20em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>

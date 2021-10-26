@@ -1,10 +1,12 @@
 <template>
+<body>
   <Header title="Header" />
   <SideNav />
   <main>
     <router-view></router-view>
   </main>
   <!-- <Footer /> -->
+</body>
 </template>
 
 <script>
@@ -22,4 +24,7 @@ export default {
 </script>
 
 <style scoped>
+body{
+  background: rgb(248, 245, 255);
+}
 </style>
