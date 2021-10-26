@@ -11,12 +11,14 @@
           />
         </div> -->
         <i class="material-icons" >school</i>
+        <div style="padding-top:10%">
         <a><span class="white-text name">KDU STUDENT SPACE</span></a>
         <a @click="$router.push('/user/profile')"
-          ><span class="white-text email">{{ email }}</span></a
-        >
+          ><span class="white-text email">{{ email }}</span></a>
+          </div>
       </div>
     </li>
+    <div class="menu">
     <li>
       <router-link to="/user/home" active-class="active">
         <i class="material-icons">home</i><span>Home</span> 
@@ -42,6 +44,7 @@
         <i class="material-icons">message</i><span>Messages</span> 
       </router-link>
     </li>
+    </div>
   </ul>
 </template>
 
@@ -72,8 +75,10 @@ export default {
   border-radius: 1em;
   max-height: 95vh;
   background-color: #5a5ecf;
-  box-shadow: 0 4px 8px 0 hsla(238, 55%, 58%, 0.205),
-    0 6px 20px 0 hsla(238, 55%, 58%, 0.685);
+  /* box-shadow: 0 4px 8px 0 hsla(238, 55%, 58%, 0.205),
+    0 6px 20px 0 hsla(238, 55%, 58%, 0.685); */
+    box-shadow: none;
+    box-shadow: -10px 10px 10px 0px rgb(167, 158, 221);
 }
 .sidenav-fixed {
   max-width: 33vh;
@@ -81,10 +86,10 @@ export default {
 .active {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background: rgb(255, 255, 255);
+   background: rgb(248, 245, 255);
   font-weight: bold;
   margin-left: 1em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 #slide-out li a {
   color: white;
@@ -110,5 +115,8 @@ li {
 ul{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+}
+.menu{
+  padding-top: 20%;
 }
 </style>
