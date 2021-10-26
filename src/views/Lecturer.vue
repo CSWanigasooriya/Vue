@@ -5,9 +5,9 @@ Z<template>
         <div class="card" >
           <div class="card-content">
             <button class="btn" @click="showAddLecturer=!showAddLecturer">Add Lecturer</button>
-      <AddLecturer v-if="showAddLecturer"/> 
+      <AddLecturer v-if="showAddLecturer" @toggle-card="updateTable"/> 
 
-    <table class="striped">
+    <table class="striped responsive-table">
       <thead>
         <tr>
           <th>Lecturer ID</th>
@@ -18,6 +18,7 @@ Z<template>
           <th>Date of Birth</th>
           <th>Email</th>
           <th>Gender</th>
+          <th></th>
         </tr>
       </thead>
       <tbody v-if="lecturers && lecturers.length">
@@ -30,7 +31,14 @@ Z<template>
           <td>{{ lecturer.lec_DOB }}</td>
           <td>{{ lecturer.lec_email }}</td>
           <td>{{ lecturer.lec_gender }}</td>
-
+          <td>
+            <i class="material-icons">edit</i
+            ><i
+              class="material-icons red-text"
+              @click="deleteLecturer(lecturer.lecID)"
+              >delete</i
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -44,15 +52,40 @@ Z<template>
 
 <script>
 import axios from "axios";
-import AddLecturer from "../components/AddLecturer.vue"
+import AddLecturer from "../components/AddLecturer.vue";
 export default {
   data() {
     return {
       lecturers: [],
-      showAddLecturer: false
+      showAddLecturer: false,
     };
   },
-  components: { AddLecturer
+  components: { AddLecturer },
+  methods: {
+    async getLecturers() {
+      await axios
+        .get(`http://localhost:3000/lecturers`)
+        .then((response) => {
+          // JSON responses are automatically parsed.
+          this.lecturers = response.data;
+        })
+        .catch((e) => {
+          // this.errors.push(e);
+        });
+    },
+    async deleteLecturer(lecID) {
+      await axios.delete(`http://localhost:3000/lecturers/${lecID}`).then(
+        setTimeout(() => {
+          this.getLecturers();
+        }, 100)
+      );
+    },
+    async updateTable() {
+      setTimeout(() => {
+        this.getLecturers();
+        this.showAddLecturer = false;
+      }, 100);
+    },
   },
   created() {
     axios

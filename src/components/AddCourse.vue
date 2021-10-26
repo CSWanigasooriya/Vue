@@ -4,16 +4,14 @@
       <div class="card">
         <div class="card-content">
           <div class="row">
-            <div class="col s6">
-              <br/>
-              <p class="left"> <b>New Course</b></p>
+            <div class="col s12">
+              <br />
+              <p class="left"><b>New Course</b></p>
             </div>
-            <div class="col s6">
-              <button class="btn right">Save</button>
-            </div>
+            
           </div>
           <div class="row">
-            <div class="col s12 ">
+            <div class="col s12">
               <div class="row">
                 <div class="col s12">
                   <div class="input-field">
@@ -21,7 +19,7 @@
                     <textarea
                       id="course_code"
                       class="materialize-textarea"
-                    ></textarea>
+                    v-model="form.course_code"></textarea>
                     <label for="course_code">Course Code</label>
                   </div>
                   <div class="input-field">
@@ -29,7 +27,7 @@
                     <textarea
                       id="course_name"
                       class="materialize-textarea"
-                    ></textarea>
+                    v-model="form.course_name"></textarea>
                     <label for="course_name">Course Name</label>
                   </div>
                   <div class="input-field">
@@ -37,11 +35,14 @@
                     <textarea
                       id="no_of_credits"
                       class="materialize-textarea"
-                    ></textarea>
+                    v-model="form.no_of_credits"></textarea>
                     <label for="no_of_credits">Credits</label>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col s12">
+              <button class="btn right" @click="onSubmit">Save</button>
             </div>
           </div>
         </div>
@@ -52,17 +53,26 @@
 
 <script>
 import { getAuth } from "firebase/auth";
-
+import axios from "axios";
 const auth = getAuth();
 const user = auth.currentUser;
 export default {
   data() {
     return {
-      email: "",
+      form: {
+        course_code: "",
+        course_name: "",
+        no_of_credits: null,
+        
+      },
     };
   },
-  created() {
-    this.email = user.email;
+  methods: {
+    async onSubmit() {
+      await axios
+        .post("http://localhost:3000/courses", this.form)
+        .then(this.$emit("toggle-card", true));
+    },
   },
 };
 </script>
