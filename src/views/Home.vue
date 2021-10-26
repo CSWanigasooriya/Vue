@@ -59,10 +59,13 @@
         <div class="card" >
           <div class="card-content">
             <span class="card-title">Announcements</span>
-            <table class="responsive-table highlight">
-              <tbody>
+            <table class="responsive-table highlight" >
+              <tbody >
                 <tr>
                   <td>Please attend fill in your profile details before the deadline.</td>
+                </tr>
+                <tr>
+                  <td>Tommorrow will be a holiday for all the FOC students.</td>
                 </tr>
                 <tr>
                   <td>Tommorrow will be a holiday for all the FOC students.</td>
@@ -148,5 +151,25 @@ export default {
 .container{
   margin-left: -1%;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background:rgb(248, 245, 255);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5a5ecf;
+  border-radius: 20em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>

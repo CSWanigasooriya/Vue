@@ -56,4 +56,26 @@ button {
 .material-icons {
   cursor: pointer;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:rgb(219, 214, 233);
+  
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5a5ecf;
+  border-radius: 20em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>
