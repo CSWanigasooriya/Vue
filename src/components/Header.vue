@@ -1,5 +1,8 @@
 <template>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <header>
     <nav class="transparent z-depth-0">
       <div class="nav-wrapper">
@@ -11,9 +14,9 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a class="waves-effect waves-light btn" @click="signOut">
-              Sign out
-            </a>
+            <i class="material-icons md-480 black-text" @click="signOut()">
+              logout
+            </i>
           </li>
         </ul>
       </div>
@@ -48,6 +51,36 @@ export default {
           return "Message";
         case "/user/profile":
           return "Profile";
+        case "/lecturer":
+          return "Home";
+          case "/lecturer/home":
+          return "Home";
+        case "/lecturer/courses":
+          return "Courses";
+        case "/lecturer/students":
+          return "Students";
+        case "/lecturer/grades":
+          return "Grades";
+        case "/lecturer/attendence":
+          return "Attendance";
+        case "/lecturer/messages":
+          return "Messages";
+        case "/lecturer/profile":
+          return "Profile";
+          case "/admin/student":
+          return "Students";
+          case "/admin/lecturer":
+          return "Lecturers";
+          case "/admin/admin-course":
+          return "Courses";
+        case "/admin/admin-grade":
+          return "Grades";
+          case "/admin/admin-attendence":
+          return "Attendance";
+          case "/admin/admin-message":
+          return "Messages";
+          case "/admin/profile":
+          return "Admin";
       }
     },
     signOut() {
@@ -70,6 +103,11 @@ export default {
   margin-left: 1em;
 }
 
+/*Rules for sizing the icon*/
+.material-icons.md-48 {
+  font-size: 480px;
+}
+
 .brand-logo img {
   max-height: 54px;
 }
@@ -84,12 +122,12 @@ export default {
   border-radius: 20px;
   background-color: #5a5ecf;
 }
-span{
-  font-family: 'Poppins', sans-serif;
+span {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 5%;
 }
-header{
-  padding:1%;
+header {
+  padding: 1%;
 }
 </style>

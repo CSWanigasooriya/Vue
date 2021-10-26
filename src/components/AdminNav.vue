@@ -12,7 +12,7 @@
         </div> -->
         <i class="material-icons">school</i>
         <a><span class="white-text name">KDU ADMIN SPACE</span></a>
-        <a @click="$router.push('/user/profile')"
+        <a @click="$router.push('/admin/profile')"
           ><span class="white-text email">{{ email }}</span></a
         >
       </div>

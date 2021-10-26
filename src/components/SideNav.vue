@@ -24,7 +24,7 @@
     </li>
     <li>
       <router-link to="/user/course" active-class="active">
-        <i class="material-icons">book</i><span>Course</span> 
+        <i class="material-icons">book</i><span>Courses</span> 
       </router-link>
     </li>
     <li>
