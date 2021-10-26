@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Header from "./components/SHeader.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
@@ -70,7 +70,7 @@ button {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5a5ecf;
+  background: #6e6e6e;
   border-radius: 20em;
 }
 

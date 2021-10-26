@@ -97,10 +97,10 @@
                 </div>
                 <div class="chat-message clearfix">
                     <div class="input-group mb-0">
-                        <form id="message-form">
-                        <input id="message-input" type="text" class="form-control" placeholder="Enter text here..."> 
-                        <button class="btn right"><i class="fa fa-send"></i></button>
-                        </form>                                   
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-send"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter text here...">                                    
                     </div>
                 </div>
             </div>
@@ -110,17 +110,7 @@
 </template>
 
 <script>
-
     export default {
-        mounted() {
-            let externalScript1 = document.createElement('script')
-            externalScript1.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js')
-            document.head.appendChild(externalScript1)
-
-            let externalScript2 = document.createElement('script')
-            externalScript2.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js')
-            document.head.appendChild(externalScript2)
-        },
         
     }
 </script>
@@ -421,7 +411,7 @@ nav{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5a5ecf;
+  background: #2e959c;
   border-radius: 20em;
 }
 

@@ -63,7 +63,7 @@ const routes = [
             {
                 path: 'profile',
                 component: () =>
-                    import('../views/Profile.vue'),
+                    import('../views/AdminProfile.vue'),
             }
         ],
         meta: {

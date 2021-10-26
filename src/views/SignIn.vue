@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import Header from "../components/Header.vue";
+import Header from "../components/SHeader.vue";
 import Footer from "../components/Footer.vue";
 import Dialog from "../components/Dialog.vue";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";

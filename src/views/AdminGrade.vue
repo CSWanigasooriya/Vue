@@ -13,12 +13,21 @@
 </template>
 
 <style scoped>
+.btn {
+  background: #383838 !important;
+  color: #5fe6f9;
+  margin-bottom: 3%;
+}
 .card {
   border-radius: 2em;
-  height: 85vh;
+  height: 82vh;
 }
 
 .valign-wrapper {
   height: 65vh;
-} 
+}
+.card-content{
+  padding:3%;
+  overflow-y:auto
+}
 </style>

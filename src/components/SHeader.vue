@@ -14,9 +14,9 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <i class="material-icons md-480 black-text" @click="signOut()">
-              logout
-            </i>
+            <a class="waves-effect waves-light btn" @click="signOut">
+              Sign out
+            </a>
           </li>
         </ul>
       </div>
