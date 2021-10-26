@@ -88,7 +88,7 @@ export default {
   components: {
     Header,
     Footer,
-    Dialog,
+    
   },
   methods: {
     signIn() {

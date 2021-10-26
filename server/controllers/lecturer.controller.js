@@ -10,7 +10,7 @@ exports.create = (req, res) => {
   }
 
   // Create a lecturer
-  const lecturer = new lecturer({
+  const lecturer = new Lecturer({
     lecID: req.body.lecID,
     lec_NIC: req.body.lec_NIC,
     lec_fName: req.body.lec_fName,
