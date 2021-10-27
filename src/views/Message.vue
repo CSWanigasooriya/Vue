@@ -34,4 +34,7 @@ import ChatApp from "../components/ChatApp.vue";
 .container{
   margin-left: -1%;
 }
+.valign-wrapper {
+  height: 65vh;
+}
 </style>

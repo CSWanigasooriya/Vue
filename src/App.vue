@@ -70,7 +70,7 @@ button {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5a5ecf;
+  background: #6e6e6e;
   border-radius: 20em;
 }
 

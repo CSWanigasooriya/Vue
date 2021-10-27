@@ -128,10 +128,12 @@ export default {
       },
     };
   },
+
   methods: {
     async onSubmit() {
-      await axios.post("http://localhost:3000/students", this.form, 
-      ).then(this.$emit('toggle-card',true))
+      await axios
+        .post("http://localhost:3000/students", this.form)
+        .then(this.$emit("toggle-card", true));
     },
   },
 };

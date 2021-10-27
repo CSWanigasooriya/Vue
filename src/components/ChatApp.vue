@@ -110,7 +110,17 @@
 </template>
 
 <script>
+
     export default {
+        mounted() {
+            let externalScript1 = document.createElement('script')
+            externalScript1.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js')
+            document.head.appendChild(externalScript1)
+
+            let externalScript2 = document.createElement('script')
+            externalScript2.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js')
+            document.head.appendChild(externalScript2)
+        },
         
     }
 </script>
