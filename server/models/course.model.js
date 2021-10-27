@@ -15,31 +15,38 @@ Course.create = (newcourse, result) => {
       return;
     }
 
-    console.log("created course: ", { course_code: res.insertcourse_code, ...newcourse });
+    console.log("created course: ", {
+      course_code: res.insertcourse_code,
+      ...newcourse,
+    });
     result(null, { course_code: res.insertcourse_code, ...newcourse });
   });
 };
 
 Course.findBycourse_code = (course_code, result) => {
-  sql.query(`SELECT * FROM course WHERE course_code= ?`, [course_code], (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(err, null);
-      return;
-    }
+  sql.query(
+    `SELECT * FROM course WHERE course_code= ?`,
+    [course_code],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(err, null);
+        return;
+      }
 
-    if (res.length > 0) {
-      console.log("found course: ", res[0]);
-      result(null, res[0]);
-      return;
-    }
+      if (res.length > 0) {
+        console.log("found course: ", res[0]);
+        result(null, res[0]);
+        return;
+      }
 
-    // not found course with the course_code
-    result({ kind: "not_found" }, null);
-  });
+      // not found course with the course_code
+      result({ kind: "not_found" }, null);
+    }
+  );
 };
 
-Course.getAll = result => {
+Course.getAll = (result) => {
   sql.query("SELECT * FROM course", (err, res) => {
     if (err) {
       console.log("error: ", err);
@@ -76,25 +83,29 @@ Course.updateBycourse_code = (course_code, course, result) => {
 };
 
 Course.remove = (course_code, result) => {
-  sql.query("DELETE FROM course WHERE course_code = ?", course_code, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(null, err);
-      return;
-    }
+  sql.query(
+    "DELETE FROM course WHERE course_code = ?",
+    course_code,
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
 
-    if (res.affectedRows == 0) {
-      // not found course with the course_code
-      result({ kind: "not_found" }, null);
-      return;
-    }
+      if (res.affectedRows == 0) {
+        // not found course with the course_code
+        result({ kind: "not_found" }, null);
+        return;
+      }
 
-    console.log("deleted course with course_code: ", course_code);
-    result(null, res);
-  });
+      console.log("deleted course with course_code: ", course_code);
+      result(null, res);
+    }
+  );
 };
 
-Course.removeAll = result => {
+Course.removeAll = (result) => {
   sql.query("DELETE FROM course", (err, res) => {
     if (err) {
       console.log("error: ", err);
@@ -105,6 +116,23 @@ Course.removeAll = result => {
     console.log(`deleted ${res.affectedRows} course`);
     result(null, res);
   });
+};
+
+Course.getCoursesByStudentId = (reqParams, result) => {
+  sql.query(
+    `SELECT * FROM course c, co_stu cs WHERE c.course_code = cs.course_code AND cs.Reg_num =? AND c.year= ? AND c.semester= ?`,
+    [reqParams.Reg_num, reqParams.year, reqParams.semester],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
+
+      console.log("course: ", res);
+      result(null, res);
+    }
+  );
 };
 
 module.exports = Course;

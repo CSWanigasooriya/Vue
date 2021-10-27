@@ -26,7 +26,7 @@ import ChatApp from "../components/ChatApp.vue";
 <style scoped>
 .card {
   border-radius: 1em;
-  height: 42em;
+    height: 82vh;
   padding-top: 1%;
   padding-left: 4%;
   padding-right: 0%;

@@ -21,7 +21,10 @@ Student.create = (newstudent, result) => {
       return;
     }
 
-    console.log("created student: ", { Reg_num: res.insertReg_num, ...newstudent });
+    console.log("created student: ", {
+      Reg_num: res.insertReg_num,
+      ...newstudent,
+    });
     result(null, { Reg_num: res.insertReg_num, ...newstudent });
   });
 };
@@ -45,7 +48,7 @@ Student.findByReg_num = (Reg_num, result) => {
   });
 };
 
-Student.getAll = result => {
+Student.getAll = (result) => {
   sql.query("SELECT * FROM student", (err, res) => {
     if (err) {
       console.log("error: ", err);
@@ -100,7 +103,7 @@ Student.remove = (Reg_num, result) => {
   });
 };
 
-Student.removeAll = result => {
+Student.removeAll = (result) => {
   sql.query("DELETE FROM student", (err, res) => {
     if (err) {
       console.log("error: ", err);
@@ -113,4 +116,55 @@ Student.removeAll = result => {
   });
 };
 
+Student.getStudentGrades = (reqParams, result) => {
+  sql.query(
+    `SELECT * FROM course c, co_stu cs WHERE cs.course_code = c.course_code AND cs.Reg_num= ? AND c.year= ? AND c.semester= ?`,
+    [reqParams.Reg_num, reqParams.year, reqParams.semester],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(err, null);
+        return;
+      }
+
+      console.log("found student: ", res);
+      result(null, res);
+      return;
+    }
+  );
+};
+
+Student.getStudentAttendanceByCourse = (reqParams, result) => {
+  sql.query(
+    `SELECT * FROM co_stu_attendance WHERE Reg_num= ? AND course_code= ?`,
+    [reqParams.Reg_num, reqParams.course_code],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(err, null);
+        return;
+      }
+
+      result(null, res[0]);
+      return;
+    }
+  );
+};
+
+Student.getStudentAllAttendance = (reqParams, result) => {
+  sql.query(
+    `SELECT * FROM co_stu_attendance ca, course c WHERE c.course_code = ca.course_code AND ca.Reg_num= ?`,
+    [reqParams.Reg_num],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(err, null);
+        return;
+      }
+      console.log('ssssssssssssssssssss', res)
+      result(null, res);
+      return;
+    }
+  );
+};
 module.exports = Student;

@@ -411,12 +411,15 @@ nav{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5a5ecf;
+  background: #2e959c;
   border-radius: 20em;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.btn {
+    background: #2e959c !important;
 }
 </style>

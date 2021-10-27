@@ -5,15 +5,15 @@
         <div class="card-content">
           <div class="row">
             <div class="col s6">
-              <br/>
-              <p class="left"> <b>New Course</b></p>
+              <br />
+              <p class="left"><b>New Course</b></p>
             </div>
             <div class="col s6">
               <button class="btn right">Save</button>
             </div>
           </div>
           <div class="row">
-            <div class="col s12 ">
+            <div class="col s12">
               <div class="row">
                 <div class="col s12">
                   <div class="input-field">
@@ -39,6 +39,19 @@
                       class="materialize-textarea"
                     ></textarea>
                     <label for="no_of_credits">Credits</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">edit</i>
+                    <textarea id="year" class="materialize-textarea"></textarea>
+                    <label for="year">Year</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">edit</i>
+                    <textarea
+                      id="semester"
+                      class="materialize-textarea"
+                    ></textarea>
+                    <label for="semester">Semester</label>
                   </div>
                 </div>
               </div>
@@ -79,5 +92,9 @@ export default {
 
 img {
   border-radius: 1em;
+}
+.btn {
+  background: #383838 !important;
+  color: #5fe6f9;
 }
 </style>

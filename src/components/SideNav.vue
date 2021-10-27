@@ -65,6 +65,7 @@ export default {
   created() {
     this.email = user.email;
     this.photoURL = user.photoURL;
+    console.log(user)
   },
 };
 </script>

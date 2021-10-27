@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col s12 m8">
-        <div class="card">
+        <div class="card" style="height: 24em;">
           <div class="card-content">
             <span class="card-title">Time Table</span>
             <table class="responsive-table highlight">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="col s12 m4">
-        <div class="card" >
+        <div class="card" style="height: 24em;" >
           <div class="card-content">
             <span class="card-title">Announcements</span>
             <table class="responsive-table highlight" >
@@ -68,7 +68,7 @@
                   <td>Tommorrow will be a holiday for all the FOC students.</td>
                 </tr>
                 <tr>
-                  <td>Tommorrow will be a holiday for all the FOC students.</td>
+                  <td>All student are required to participate in next week's seminar.</td>
                 </tr>
               </tbody>
             </table>
@@ -78,14 +78,24 @@
     </div>
     <div class="row">
       <div class="col s12 m5">
-        <div class="card">
+        <div class="card" style="height: 18em;">
           <div class="card-content">
             <span class="card-title">Courses</span>
+            <table class="responsive-table highlight" >
+              <tbody >
+                <tr>
+                  <td>Data stuctures and Algortihms 2</td>
+                </tr>
+                <tr>
+                  <td>Computer Interfacing and Microprocessors</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
       <div class="col s12 m3">
-        <div class="card">
+        <div class="card" style="height: 18em;">
           <div class="card-content" >
             <span class="card-title">Attendance</span>
             <div style="text-align:center;">
@@ -97,7 +107,7 @@
         </div>
       </div>
       <div class="col s12 m4">
-        <div class="card">
+        <div class="card" style="height: 18em;">
           <div class="card-content">
             <span class="card-title">Messages</span>
             <table class="responsive-table highlight striped">

@@ -22,7 +22,7 @@
 import { getAuth, signOut } from "firebase/auth";
 
 import AdminNav from "../components/AdminNav.vue";
-import Header from "../components/Header.vue";
+import Header from "../components/HeaderA.vue";
 import Footer from "../components/Footer.vue";
 export default {
   data() {

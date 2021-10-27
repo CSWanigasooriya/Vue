@@ -76,4 +76,8 @@ export default {
 img {
   border-radius: 1em;
 }
+.btn {
+  background: #2e959c !important;
+  color: #ffffff;
+}
 </style>

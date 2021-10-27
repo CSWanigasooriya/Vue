@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .card {
   border-radius: 2em;
-  height: 85vh;
+  height: 82vh;
 }
 
 .valign-wrapper {
@@ -75,5 +75,9 @@ export default {
 
 img {
   border-radius: 1em;
+}
+.btn {
+  background: #383838 !important;
+  color: #5fe6f9;
 }
 </style>
